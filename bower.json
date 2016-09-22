@@ -1,7 +1,7 @@
 {
   "name": "x-client",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
+  "description": "Application for PTV xServer 2",
+  "version": "0.0.1",
   "homepage": "https://github.com/x-client/x-client",
   "license": "MIT",
   "private": true,
