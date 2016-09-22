@@ -2,7 +2,7 @@
   "name": "x-client",
   "description": "A starter project for AngularJS",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
+  "homepage": "https://github.com/x-client/x-client",
   "license": "MIT",
   "private": true,
   "dependencies": {
