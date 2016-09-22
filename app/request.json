@@ -1,0 +1,4 @@
+	  "searchObject": {
+								"$type": "AddressLine",
+								"text": self.city
+							  }

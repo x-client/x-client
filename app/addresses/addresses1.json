@@ -1,0 +1,56 @@
+{
+  "errorCode": 0,
+  "errorDescription": "",
+  "resultList": [
+    {
+      "$type": "ResultAddress",
+      "country": "L",
+      "state": "Lëtzebuerg",
+      "postCode": "2227",
+      "city": "Lëtzebuerg",
+      "city2": "",
+      "street": "Avenue de la Porte-Neuve",
+      "houseNumber": "4",
+      "adminRegion": "Lëtzebuerg",
+      "appendix": "",
+      "countryCapital": "",
+      "totalScore": 6,
+      "detailLevelDescription": "HNRINTERPOLATED",
+      "classificationDescription": "EXACT",
+      "coordinates": {
+        "$type": "Point",
+        "point": {
+          "$type": "PlainPoint",
+          "x": 681415.39029,
+          "y": 6372249.4305
+        }
+      },
+      "additionalFields": []
+    },
+    {
+      "$type": "ResultAddress",
+      "country": "L",
+      "state": "Lëtzebuerg",
+      "postCode": "1660",
+      "city": "Lëtzebuerg",
+      "city2": "",
+      "street": "Grand-Rue",
+      "houseNumber": "66",
+      "adminRegion": "Lëtzebuerg",
+      "appendix": "",
+      "countryCapital": "",
+      "totalScore": 9,
+      "detailLevelDescription": "HNRINTERPOLATED",
+      "classificationDescription": "HIGH",
+      "coordinates": {
+        "$type": "Point",
+        "point": {
+          "$type": "PlainPoint",
+          "x": 681425.00937,
+          "y": 6372235.0019
+        }
+      },
+      "additionalFields": []
+    }
+  ]
+}

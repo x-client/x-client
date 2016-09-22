@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaflet Demo</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript" src="/xmap/xmap-client.js"></script>
+
+        <link rel="stylesheet" href="app.css" />
+        <link rel="stylesheet" href="leaflet/leaflet.css" />
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="leaflet/leaflet.ie.css" />
+        <![endif]-->
+        <script type="text/javascript" src="leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="../leaflet.ptv.js"></script>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script type="text/javascript">
+            var bgLayer = new L.PtvLayer.Background();
+            var fgLayer = new L.PtvLayer.Foreground();
+            var osmLayer = new L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            });
+
+            var map = new L.Map('map', {
+                center: new L.LatLng(49.61, 6.13),
+                zoom: 5,
+                layers: [bgLayer, fgLayer],
+                crs: L.CRS.PTVMercator
+            });
+
+            var base = {
+                "PTV Map": bgLayer,
+                "OSM": osmLayer
+            };
+
+            var overlays = {
+                "Labels": fgLayer
+            };
+
+            var layersControl = L.control.layers(base, overlays).addTo(map), markers = L.layerGroup().addTo(map);
+
+            map.attributionControl.setPosition('bottomleft');
+            map.attributionControl.setPrefix('&copy; PTV, TomTom');
+            map.zoomControl.setPosition('bottomright');
+        </script>
+    </body>
+</html>
+

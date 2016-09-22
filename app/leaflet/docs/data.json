@@ -1,0 +1,684 @@
+{
+    "project": {
+        "name": "leaflet.ptv",
+        "description": "",
+        "version": "0.1.0",
+        "url": ""
+    },
+    "files": {
+        "src\\AbstractOverlay.js": {
+            "name": "src\\AbstractOverlay.js",
+            "modules": {
+                "L.PtvLayer": 1
+            },
+            "classes": {
+                "L.PtvLayer.AbstractOverlay": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\Background.js": {
+            "name": "src\\Background.js",
+            "modules": {},
+            "classes": {
+                "L.PtvLayer.Background": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\Foreground.js": {
+            "name": "src\\Foreground.js",
+            "modules": {},
+            "classes": {
+                "L.PtvLayer.Foreground": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\Poi.js": {
+            "name": "src\\Poi.js",
+            "modules": {},
+            "classes": {
+                "L.PtvLayer.Poi": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\PtvMercator.js": {
+            "name": "src\\PtvMercator.js",
+            "modules": {
+                "L.CRS": 1
+            },
+            "classes": {
+                "L.CRS.PTVMercator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\Utils.js": {
+            "name": "src\\Utils.js",
+            "modules": {
+                "L": 1
+            },
+            "classes": {
+                "L.PtvUtils": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "L.PtvLayer": {
+            "name": "L.PtvLayer",
+            "submodules": {},
+            "classes": {
+                "L.PtvLayer.AbstractOverlay": 1,
+                "L.PtvLayer.Background": 1,
+                "L.PtvLayer.Foreground": 1,
+                "L.PtvLayer.Poi": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src\\Poi.js",
+            "line": 6
+        },
+        "L.CRS": {
+            "name": "L.CRS",
+            "submodules": {},
+            "classes": {
+                "L.CRS.PTVMercator": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src\\PtvMercator.js",
+            "line": 5
+        },
+        "L": {
+            "name": "L",
+            "submodules": {},
+            "classes": {
+                "L.PtvUtils": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src\\Utils.js",
+            "line": 5
+        }
+    },
+    "classes": {
+        "L.PtvLayer.AbstractOverlay": {
+            "name": "L.PtvLayer.AbstractOverlay",
+            "shortname": "L.PtvLayer.AbstractOverlay",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "L.PtvLayer",
+            "namespace": "",
+            "file": "src\\AbstractOverlay.js",
+            "line": 6,
+            "description": "Provides the PTV AbstractOverlay Layer class.",
+            "extends": "L.ILayer",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "The options object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "format",
+                            "description": "The image format used in tile requests.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "beforeSend",
+                            "description": "Function to be called before sending the request with the request object given as first parameter. The (modified) request object must be returned.",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "is_constructor": 1
+        },
+        "L.PtvLayer.Background": {
+            "name": "L.PtvLayer.Background",
+            "shortname": "L.PtvLayer.Background",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "L.PtvLayer",
+            "namespace": "",
+            "file": "src\\Background.js",
+            "line": 6,
+            "description": "Provides the PTV Background TileLayer class.",
+            "extends": "L.TileLayer",
+            "params": [
+                {
+                    "name": "client",
+                    "description": "XMapClient object",
+                    "type": "XMapClient"
+                },
+                {
+                    "name": "options",
+                    "description": "The options object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "format",
+                            "description": "The image format used in tile requests.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "beforeSend",
+                            "description": "Function to be called before sending the request with the request object given as first parameter. The (modified) request object must be returned.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "errorTileUrl",
+                            "description": "The image to display when requests fail.",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "is_constructor": 1
+        },
+        "L.PtvLayer.Foreground": {
+            "name": "L.PtvLayer.Foreground",
+            "shortname": "L.PtvLayer.Foreground",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "L.PtvLayer",
+            "namespace": "",
+            "file": "src\\Foreground.js",
+            "line": 6,
+            "description": "Provides the PTV Foreground Layer class.",
+            "extends": "L.PtvLayer.AbstractLayer",
+            "params": [
+                {
+                    "name": "client",
+                    "description": "XMapClient object",
+                    "type": "XMapClient"
+                },
+                {
+                    "name": "options",
+                    "description": "The options object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "format",
+                            "description": "The image format used in tile requests.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "beforeSend",
+                            "description": "Function to be called before sending the request with the request object given as first parameter. The (modified) request object must be returned.",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "is_constructor": 1
+        },
+        "L.PtvLayer.Poi": {
+            "name": "L.PtvLayer.Poi",
+            "shortname": "L.PtvLayer.Poi",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "L.PtvLayer",
+            "namespace": "",
+            "file": "src\\Poi.js",
+            "line": 6,
+            "description": "Provides the PTV POI Layer class.",
+            "extends": "L.PtvLayer.AbstractLayer",
+            "params": [
+                {
+                    "name": "client",
+                    "description": "XMapClient object",
+                    "type": "XMapClient"
+                },
+                {
+                    "name": "options",
+                    "description": "The options object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "format",
+                            "description": "The image format used in tile requests.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "beforeSend",
+                            "description": "Function to be called before sending the request with the request object given as first parameter. The (modified) request object must be returned.",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "is_constructor": 1
+        },
+        "L.CRS.PTVMercator": {
+            "name": "L.CRS.PTVMercator",
+            "shortname": "L.CRS.PTVMercator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "L.CRS",
+            "namespace": "",
+            "file": "src\\PtvMercator.js",
+            "line": 5,
+            "description": "Provides the PTV Mercator coordinate reference system.",
+            "is_constructor": 1
+        },
+        "L.PtvUtils": {
+            "name": "L.PtvUtils",
+            "shortname": "L.PtvUtils",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "L",
+            "namespace": "",
+            "file": "src\\Utils.js",
+            "line": 5,
+            "static": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "src\\AbstractOverlay.js",
+            "line": 25,
+            "description": "Default options used in this class.",
+            "itemtype": "property",
+            "name": "options",
+            "type": "Object",
+            "class": "L.PtvLayer.AbstractOverlay",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\AbstractOverlay.js",
+            "line": 31,
+            "description": "The image format used in tile requests.",
+            "itemtype": "property",
+            "name": "options.format",
+            "type": "String",
+            "default": "\"PNG\"",
+            "class": "L.PtvLayer.AbstractOverlay",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\AbstractOverlay.js",
+            "line": 39,
+            "description": "Function to be called before sending the request with the request object given as first parameter. The (modified) request object must be returned.",
+            "itemtype": "property",
+            "name": "options.beforeSend",
+            "type": "function",
+            "default": "null",
+            "class": "L.PtvLayer.AbstractOverlay",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\AbstractOverlay.js",
+            "line": 47,
+            "description": "The world bounds for PTV Maps.",
+            "itemtype": "property",
+            "name": "options.bounds",
+            "type": "L.LatLngBounds",
+            "default": "[[85.0, -178.965000], [-66.5, 178.965000]]",
+            "class": "L.PtvLayer.AbstractOverlay",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\AbstractOverlay.js",
+            "line": 56,
+            "description": "Constructor",
+            "itemtype": "method",
+            "name": "L.PtvLayer.AbstractOverlay",
+            "params": [
+                {
+                    "name": "client",
+                    "description": "optional XMapClient object",
+                    "type": "XMapClient"
+                },
+                {
+                    "name": "options",
+                    "description": "optional options object",
+                    "type": "Object"
+                }
+            ],
+            "class": "L.PtvLayer.AbstractOverlay",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 21,
+            "description": "Default options used in this class.",
+            "itemtype": "property",
+            "name": "options",
+            "type": "Object",
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 27,
+            "description": "The image format used in tile requests.",
+            "itemtype": "property",
+            "name": "options.format",
+            "type": "String",
+            "default": "\"PNG\"",
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 35,
+            "description": "Function to be called before sending the request with the request object given as first parameter. The (modified) request object must be returned.",
+            "itemtype": "property",
+            "name": "options.beforeSend",
+            "type": "function",
+            "default": "null",
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 43,
+            "description": "The image to display when requests fail.",
+            "itemtype": "property",
+            "name": "options.errorTileUrl",
+            "type": "String",
+            "default": "\"tile-error.png\"",
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 51,
+            "description": "If set to true, the tiles just won't load outside the world width (-180 to 180 longitude) instead of repeating.",
+            "itemtype": "property",
+            "name": "options.noWrap",
+            "type": "boolean",
+            "default": "true",
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 59,
+            "description": "The world bounds for PTV Maps.",
+            "itemtype": "property",
+            "name": "options.bounds",
+            "type": "L.LatLngBounds",
+            "default": "[[85.0, -178.965000], [-66.5, 178.965000]]",
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 67,
+            "description": "Minimum zoom number.",
+            "itemtype": "property",
+            "name": "options.minZoom",
+            "type": "boolean",
+            "default": "true",
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 76,
+            "description": "Constructor",
+            "itemtype": "method",
+            "name": "L.PtvLayer.Background",
+            "params": [
+                {
+                    "name": "client",
+                    "description": "optional XMapClient object",
+                    "type": "XMapClient"
+                },
+                {
+                    "name": "options",
+                    "description": "optional options object",
+                    "type": "Object"
+                }
+            ],
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 108,
+            "description": "Loads a specific tile and shows the result when finished.",
+            "itemtype": "method",
+            "name": "_loadTile",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "tile",
+                    "description": "The tile dom img element",
+                    "type": "DOMElement"
+                },
+                {
+                    "name": "tilePoint",
+                    "description": "The tile point",
+                    "type": "Point"
+                }
+            ],
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\Background.js",
+            "line": 123,
+            "description": "Requests a specific tile from the server.",
+            "itemtype": "method",
+            "name": "_requestTile",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "tile",
+                    "description": "The tile dom img element",
+                    "type": "DOMElement"
+                },
+                {
+                    "name": "tilePoint",
+                    "description": "The tile point",
+                    "type": "Point"
+                }
+            ],
+            "class": "L.PtvLayer.Background",
+            "module": "L.PtvLayer"
+        },
+        {
+            "file": "src\\PtvMercator.js",
+            "line": 11,
+            "description": "Standard code name of the CRS passed into WMS services.",
+            "itemtype": "property",
+            "name": "code",
+            "type": "String",
+            "default": "\"PTV:MERCATOR\"",
+            "readonly": "",
+            "class": "L.CRS.PTVMercator",
+            "module": "L.CRS"
+        },
+        {
+            "file": "src\\PtvMercator.js",
+            "line": 20,
+            "description": "Projection that this CRS uses.",
+            "itemtype": "property",
+            "name": "projection",
+            "type": "L.IProjection",
+            "readonly": "",
+            "class": "L.CRS.PTVMercator",
+            "module": "L.CRS"
+        },
+        {
+            "file": "src\\PtvMercator.js",
+            "line": 28,
+            "description": "Transformation that this CRS uses to turn projected coordinates into screen coordinates for a particular tile service.",
+            "itemtype": "property",
+            "name": "transformation",
+            "type": "L.Transformation",
+            "readonly": "",
+            "class": "L.CRS.PTVMercator",
+            "module": "L.CRS"
+        },
+        {
+            "file": "src\\PtvMercator.js",
+            "line": 36,
+            "description": "The earth radius used for projections.",
+            "itemtype": "property",
+            "name": "earthRadius",
+            "type": "Number",
+            "default": "6371000",
+            "access": "private",
+            "tagname": "",
+            "class": "L.CRS.PTVMercator",
+            "module": "L.CRS"
+        },
+        {
+            "file": "src\\PtvMercator.js",
+            "line": 45,
+            "description": "Projects a geographical coordinate into a PTV Mercator point.",
+            "itemtype": "method",
+            "name": "project",
+            "return": {
+                "description": "PTV Mercator point.",
+                "type": "Point"
+            },
+            "class": "L.CRS.PTVMercator",
+            "module": "L.CRS"
+        },
+        {
+            "file": "src\\PtvMercator.js",
+            "line": 55,
+            "description": "Unprojects a PTV Mercator point to a geographical coordinate.",
+            "itemtype": "method",
+            "name": "unproject",
+            "return": {
+                "description": "Geographical coordinate.",
+                "type": "L.LatLng"
+            },
+            "class": "L.CRS.PTVMercator",
+            "module": "L.CRS"
+        },
+        {
+            "file": "src\\Utils.js",
+            "line": 11,
+            "description": "Prefix map for data URIs.",
+            "itemtype": "attribute",
+            "name": "L.PtvUtils._prefixMap",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "class": "L.PtvUtils",
+            "module": "L"
+        },
+        {
+            "file": "src\\Utils.js",
+            "line": 24,
+            "description": "Returns the raw image with prefixed data URI.",
+            "itemtype": "method",
+            "name": "L.PtvUtils.createDataURI",
+            "return": {
+                "description": "the raw image with prefixed data URI.",
+                "type": "String"
+            },
+            "class": "L.PtvUtils",
+            "module": "L"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\AbstractOverlay.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\AbstractOverlay.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\AbstractOverlay.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Background.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Background.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Background.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Background.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Background.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Foreground.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Foreground.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Foreground.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Foreground.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Poi.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Poi.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Poi.js:6"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src\\Poi.js:6"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+<div class="main-left">
+		 
+		<p>
+			<input type="text" ng-model="$ctrl.inputcity"/>
+			<button type="button" ng-click='$ctrl.sendRequest()'>Search</button> 
+		</p>
+			<table  ng-table="tableParams" class="addresses">
+			<tr ng-repeat="location in $ctrl.locations" ng-click="$ctrl.setSelected(location)">
+				<td data-title="'City'" sortable="'address.city'">{{location.address.city}}</td>
+				<td data-title="'Country'">{{location.address.countryName}}</td>
+				<td data-title="'Address'">{{location.address.formattedAddress}}</td>
+				<td data-title="'x-Coordinate'">{{location.referenceCoordinate.x}}</td>
+				<td data-title="'y-Coordinate'">{{location.referenceCoordinate.y}}</td>
+			</tr>		
+		</table>	
+         
+

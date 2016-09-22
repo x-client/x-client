@@ -1,0 +1,180 @@
+body {
+  padding: 20px;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+}
+
+.page-wrap	{
+	float: right;
+	width: 800px;
+	height: 800px;
+    margin: 15px auto; 
+    position: relative; 
+}
+
+.main-left{
+	float: left;
+	position: relative;
+	padding-top: 10px;
+}
+
+.main-right{
+	position: fixed;
+	padding-top: 10px;
+	border: 1px solid black;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.ng-scope td{
+	width: 100px;
+	height: auto;
+	border: 1px solid black;
+	padding: 3px;
+}
+
+.search th, td{
+	
+	width: 100px;
+	border: 0px;
+	padding: 5px;
+}
+
+.search button{
+	padding-top: 10px;
+}
+
+/* View: Phone list */
+.phones {
+  list-style: none;
+}
+
+.phones li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+.thumb {
+  float: left;
+  height: 100px;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;
+  width: 100px;
+}
+
+/* View: 'Amp list */
+.amps{
+  list-style: none;
+}
+
+.amps li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+/* View: Amp detail */
+.amp{
+
+}
+
+.amp-div{
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 500px; ;
+}
+
+.amp-thumbs{
+  list-style: none;
+  margin: 0;
+}
+
+.amp-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: auto;
+}
+
+.amp-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+/* View: Phone detail */
+.phone {
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.phone-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.phone-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+.phone-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+.specs {
+  float: left;
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs dd{
+  display: inline-block;
+
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.specs-statement {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  width: 600px;
+}

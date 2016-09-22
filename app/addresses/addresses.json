@@ -1,0 +1,77 @@
+[
+    {
+      "$type": "ResultAddress",
+      "country": "L",
+      "state": "Germany",
+      "postCode": "76227",
+      "city": "Karlsruhe",
+      "city2": "",
+      "street": "Stumpfstr. ",
+      "houseNumber": "4",
+      "adminRegion": "Lëtzebuerg",
+      "appendix": "",
+      "countryCapital": "",
+      "totalScore": 6,
+      "detailLevelDescription": "HNRINTERPOLATED",
+      "classificationDescription": "EXACT",
+      "coordinates": {
+        "$type": "Point",
+        "point": {
+          "$type": "PlainPoint",
+          "x": 681415.39029,
+          "y": 6372249.4305
+        }
+      },
+      "additionalFields": []
+    },
+	{
+      "$type": "ResultAddress",
+      "country": "L",
+      "state": "Germany",
+      "postCode": "89520",
+      "city": "Heidenheim",
+      "city2": "",
+      "street": "Schülestr.",
+      "houseNumber": "74",
+      "adminRegion": "Baden-Württemberg",
+      "appendix": "",
+      "countryCapital": "",
+      "totalScore": 6,
+      "detailLevelDescription": "HNRINTERPOLATED",
+      "classificationDescription": "EXACT",
+      "coordinates": {
+        "$type": "Point",
+        "point": {
+          "$type": "PlainPoint",
+          "x": 681415.39029,
+          "y": 6372249.4305
+        }
+      },
+      "additionalFields": []
+    },
+    {
+      "$type": "ResultAddress",
+      "country": "L",
+      "state": "Great Britain",
+      "postCode": "1660",
+      "city": "London",
+      "city2": "",
+      "street": "Main Street",
+      "houseNumber": "66",
+      "adminRegion": "Great Britain",
+      "appendix": "",
+      "countryCapital": "",
+      "totalScore": 9,
+      "detailLevelDescription": "HNRINTERPOLATED",
+      "classificationDescription": "HIGH",
+      "coordinates": {
+        "$type": "Point",
+        "point": {
+          "$type": "PlainPoint",
+          "x": 681425.00937,
+          "y": 6372235.0019
+        }
+      },
+      "additionalFields": []
+    }
+  ]

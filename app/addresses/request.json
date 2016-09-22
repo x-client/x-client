@@ -1,0 +1,67 @@
+{
+  "location": {
+    "$type": "Location",
+    "coordinate": {
+      "$type": "Point",
+      "point": {
+        "$type": "PlainPoint",
+        "x": 840405.908,
+        "y": 4901071.99
+      }
+    }
+  },
+  "options": [
+    {
+      "$type": "ReverseSearchOption",
+      "value": "3",
+      "param": "COUNTRY_CODETYPE"
+    },
+    {
+      "$type": "ReverseSearchOption",
+      "value": "DEU",
+      "param": "RESULT_LANGUAGE"
+    },
+    {
+      "$type": "ReverseSearchOption",
+      "value": "1",
+      "param": "ENGINE_FILTERMODE"
+    },
+    {
+      "$type": "ReverseSearchOption",
+      "value": "100",
+      "param": "ENGINE_TOLERANCE"
+    },
+    {
+      "$type": "ReverseSearchOption",
+      "value": "500",
+      "param": "ENGINE_TARGETSIZE"
+    },
+    {
+      "$type": "ReverseSearchOption",
+      "value": "1000",
+      "param": "ENGINE_SEARCHRANGE"
+    },
+    {
+      "$type": "ReverseSearchOption",
+      "param": "ENGINE_SEARCHDETAILLEVEL"
+    }
+  ],
+  "sorting": null,
+  "additionalFields": null,
+  "callerContext": {
+    "properties": [
+      {
+        "key": "CoordFormat",
+        "value": "PTV_GEODECIMAL"
+      },
+      {
+        "key": "ResponseGeometry",
+        "value": "PLAIN"
+      },
+      {
+        "key": "Profile",
+        "value": "default"
+      }
+    ]
+  }
+}

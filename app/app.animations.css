@@ -1,0 +1,30 @@
+.amp-list-item.ng-enter,
+.amp-list-item.ng-leave,
+.amp-list-item.ng-move {
+  transition: 0.5s linear all;
+}
+
+.amp-list-item.ng-enter,
+.amp-list-item.ng-move {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.amp-list-item.ng-enter.ng-enter-active,
+.amp-list-item.ng-move.ng-move-active {
+  height: 120px;
+  opacity: 1;
+}
+
+.amp-list-item.ng-leave {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.amp-list-item.ng-leave.ng-leave-active {
+  height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
