@@ -3,27 +3,20 @@ angular.
   component('xlocateList', {
     templateUrl: 'xlocate-list/xlocate-list.template.html',
 
-    controller: ['Xlocate', 'RequestService', 'XlocateService', 'RenderMap', 'UpdateMap', 'NgTableParams',
-		function XlocateListConstroller( Xlocate, RequestService, XlocateService, RenderMap, UpdateMap, NgTableParams){
+    controller: ['Xlocate', 'RequestService', 'XlocateService', 'RenderMap', 'UpdateMap',
+		function XlocateListConstroller( Xlocate, RequestService, XlocateService, RenderMap, UpdateMap){
 			var self = this; 	
 			self.locations = [];
+            
 			self.orderProp = "city";
-			
-			self.tableParams = new NgTableParams({}, { dataset: self.locations });
+
 			var layer;
 			self.map = RenderMap.getMap(49.008083301,  8.4037561426);
 			self.tileLayer = RenderMap.getTileLayer().addTo(self.map);
-			//xServer 1.20 request
-			self.setAddress = function setAddress(){
-					getData = Xlocate.save(function(response){
-					
-					self.addresses = response.data.resultList;
-					console.log(response.data.resultList);
-				});
-			};
-			
+
 			//xLocate 2.0 request
 			self.sendRequest = function(){
+				self.displayCollection = [];
 				var request =   { 
 					  "searchObject": {
 						"$type": "AddressLine",
@@ -33,15 +26,15 @@ angular.
 
 			var myObj = XlocateService.sendRequest(request).then(function(response){
 					
-					var obj = response.data.results;
 					
+					var obj = response.data.results;
 					for(var i=0; i<obj.length; i++){
 						var location = obj[i].location;
 						self.locations[i] = location;
 					}
-					
-					console.log(self.locations);
-					
+					self.displayCollection = [].concat(self.locations);
+										
+			
 					//Map stuff
 					var pois = [];
 					var coords = [];
@@ -85,7 +78,8 @@ angular.
 			self.map.setZoom(15);
 			self.map.panTo([location.referenceCoordinate.y, location.referenceCoordinate.x]);
 			
-		};			
+			};
+
 	}
 		
 	]

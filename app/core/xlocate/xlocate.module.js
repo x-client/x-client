@@ -1,1 +1,1 @@
-angular.module('core.xlocate', ['ngResource', 'ngTable']);
+angular.module('core.xlocate', ['ngResource', 'smart-table']);

@@ -6,6 +6,19 @@ h1 {
   border-bottom: 1px solid gray;
 }
 
+  .st-sort-ascent:before{
+    content: '\25B2';
+  }
+
+  .st-sort-descent:before{
+    content: '\25BC';
+  }
+  
+  .st-selected {
+    background-color: brown;
+    color: #FFF;
+}
+
 .page-wrap	{
 	float: right;
 	width: 800px;
@@ -31,7 +44,7 @@ h1 {
 
 
 .ng-scope td{
-	width: 100px;
+	width: 180px;
 	height: auto;
 	border: 1px solid black;
 	padding: 3px;
