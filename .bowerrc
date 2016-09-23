@@ -1,0 +1,6 @@
+{
+  "directory": "app/bower_components",
+  "proxy": "http://proxy.ptvag.ptv.de:8008",
+  "https-proxy": "http://proxy.ptvag.ptv.de:8080",
+  "interactive": false
+}
