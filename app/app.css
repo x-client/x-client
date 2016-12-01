@@ -1,193 +1,166 @@
-body {
-  padding: 20px;
+
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+		  
+		  height : 100%;
+		  width: 100%;
+	padding:0;
 }
-
-h1 {
-  border-bottom: 1px solid gray;
-}
-
-  .st-sort-ascent:before{
-    content: '\25B2';
-  }
-
-  .st-sort-descent:before{
-    content: '\25BC';
-  }
-  
-  .st-selected {
-    background-color: brown;
-    color: #FFF;
-}
-
-.page-wrap	{
-	float: right;
-	width: 800px;
-	height: 800px;
-    margin: 15px auto; 
-    position: relative; 
-}
-
-.main-left{
-	float: left;
-	position: relative;
-	padding-top: 10px;
-}
-
-.main-right{
-	position: fixed;
-	padding-top: 10px;
-	border: 1px solid black;
-	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
-
-.ng-scope td{
-	width: 180px;
-	height: auto;
-	border: 1px solid black;
-	padding: 3px;
-}
-
-.search th, td{
+.wrapper header{
+	width: 100%;
+	margin:0;
 	
-	width: 100px;
-	border: 0px;
-	padding: 5px;
+ }
+.wrapper footer {
+  padding: 20px;
+  background: #666;
+  color: white;
+  width: 100%;
+  	margin:0;
+}
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+	  flex-grow : 1;
+         
+  background: pink;
+  width: 100%;
+  height: 100%;
+  	margin:0;
+}
+.col-1 {
+  background: lightblue;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1
+         
+		
+}
+.col-2 {
+  background: honeydew;
+   -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+	 
+      
+	 flex-grow : 1 
 }
 
-.search button{
-	padding-top: 10px;
+#xlocate-results {
+	display:none;
+	
+}
+@media (min-width: 800px) {
+	.wrapper {
+		display: flex;
+		height:100%;
+	}
+	
+.content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+			height:100%;	  
+  }
+ .col-1 {
+    width: 100%;
+	height: 80%;
+	order:-1;
+  }
+.col-2 {
+	  order: 1;
+  width : 100%;
+  
+ }
 }
 
-/* View: Phone list */
-.phones {
-  list-style: none;
+ .footer 
+{
+	order:3;
 }
 
-.phones li {
-  clear: both;
-  height: 115px;
-  padding-top: 15px;
+@media (min-width: 700px) {
+  .wrapper .content {
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+			  display: flex;
+  }
+  .wrapper, .content, .col-1 .col-2,  {
+  
+   width: auto;
+	height: auto;
+  }
+   .wrapper, .col-2 {
+  order: -1; 
+  width:100%;
+  }
+}
+@media (min-width: 700px) {
+  .content {
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+			  display: flex;
+  }
+   .col-1, .col-2, {
+  
+
+	height: auto;
+  }
+   .wrapper, .col-2 {
+  order: 2; 
+  
+  }
 }
 
-.thumb {
-  float: left;
-  height: 100px;
-  margin: -0.5em 1em 1.5em 0;
-  padding-bottom: 1em;
-  width: 100px;
+
+@media (max-width: 700px) {
+  .content {
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+			  display: flex;
+  }
+.col-1, .col-2{
+  
+   width: auto;
+	height: auto;
+  }
+ .col-2 {
+  order: -1 ; 
+  width:100%;
+  }
 }
 
-/* View: 'Amp list */
-.amps{
-  list-style: none;
+.main {
+	max-height: 450px;
+	overflow-y: auto;
 }
 
-.amps li {
-  clear: both;
-  height: 115px;
-  padding-top: 15px;
-}
-
-/* View: Amp detail */
-.amp{
-
-}
-
-.amp-div{
-  background-color: white;
-  border: 1px solid black;
-  float: left;
-  height: 400px;
-  margin-bottom: 2em;
-  margin-right: 3em;
-  padding: 2em;
-  width: 500px; ;
-}
-
-.amp-thumbs{
-  list-style: none;
-  margin: 0;
-}
-
-.amp-thumbs img {
-  height: 100px;
-  padding: 1em;
-  width: auto;
-}
-
-.amp-thumbs li {
-  background-color: white;
-  border: 1px solid black;
-  cursor: pointer;
-  display: inline-block;
-  margin: 1em;
-}
-
-/* View: Phone detail */
-.phone {
-  background-color: white;
-  border: 1px solid black;
-  float: left;
-  height: 400px;
-  margin-bottom: 2em;
-  margin-right: 3em;
-  padding: 2em;
-  width: 400px;
-}
-
-.phone-thumbs {
-  list-style: none;
-  margin: 0;
-}
-
-.phone-thumbs img {
-  height: 100px;
-  padding: 1em;
-  width: 100px;
-}
-
-.phone-thumbs li {
-  background-color: white;
-  border: 1px solid black;
-  cursor: pointer;
-  display: inline-block;
-  margin: 1em;
-}
-
-.specs {
-  float: left;
-  clear: both;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.specs dt {
-  font-weight: bold;
-}
-
-.specs dd{
-  display: inline-block;
+.searchfields {
+	position: fixed;
 
 }
 
-.specs > li {
-  display: inline-block;
-  vertical-align: top;
-  width: 400px;
-}
-
-.specs > li > span {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.specs-statement {
-  list-style: none;
-  display: inline-block;
-  vertical-align: top;
-  width: 600px;
-}

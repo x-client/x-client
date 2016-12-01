@@ -11,7 +11,12 @@ angular.
 			self.orderProp = "city";
 
 			var layer;
-			self.map = RenderMap.getMap(49.008083301,  8.4037561426);
+			if (self.map == null){
+				self.map = RenderMap.getMap(49.008083301,  8.4037561426);
+				
+				 
+			}
+			 
 			self.tileLayer = RenderMap.getTileLayer().addTo(self.map);
 
 			//xLocate 2.0 request
@@ -31,9 +36,11 @@ angular.
 					for(var i=0; i<obj.length; i++){
 						var location = obj[i].location;
 						self.locations[i] = location;
+						console.log(self.locations);
 					}
 					self.displayCollection = [].concat(self.locations);
-										
+					//display table
+					$('#xlocate-results').show(); 				
 			
 					//Map stuff
 					var pois = [];

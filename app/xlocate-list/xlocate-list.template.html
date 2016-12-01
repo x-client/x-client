@@ -1,29 +1,32 @@
-<div class="main-left">
+<div>
 		 
 		<p>
 			<input type="text" ng-model="$ctrl.inputcity"/>
-			<button type="button" ng-click='$ctrl.sendRequest()'>Search</button> 
+			<button type="button" ng-click="$ctrl.sendRequest()" class="btn btn-primary">searchLocations</button> 
 		</p>
-			<table st-table="$ctrl.displayCollection" st-safe-src="$ctrl.locations" class="addresses">
+			<table id='xlocate-results' st-table="$ctrl.displayCollection" st-safe-src="$ctrl.locations" class="table table-striped table-bordered">
 			<thead>
 				<tr>
 					<th st-sort="address.city">City</th>
-					<th st-sort="address.countryName">Country Name</th>
-					<th>Address</th>
-					<th>x-Coordinate</th>
-					<th>y-Coordinate</th>
+					<th>Postcode</th>
+					<th>Street</th>
+					<th>Longitude</th>
+					<th>Latitude</th>
 				</tr>
 			</thead>
 			<tbody>
 			<tr st-select-row="location" ng-repeat="location in $ctrl.displayCollection" ng-click="$ctrl.setSelected(location)">
 				<td>{{location.address.city}}</td>
-				<td>{{location.address.countryName}}</td>
-				<td>{{location.address.formattedAddress}}</td>
+				<td>{{location.address.postalCode}}</td>
+				<td>{{location.address.street}}</td>
 				<td>{{location.referenceCoordinate.x}}</td>
 				<td>{{location.referenceCoordinate.y}}</td>
-				
 			</tr>		
 			</tbody>
 		</table>
+		
+
+		
+</div>
          
 

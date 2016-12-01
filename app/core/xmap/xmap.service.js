@@ -9,7 +9,7 @@ function RenderMap() {
 	
   
 	  this.getTileLayer = function(){
-		var urlTemplate = 'http://xserver-2:50000/services/rest/XMap/tile/{z}/{x}/{y}/gravelpit+PTV_TruckAttributes';
+		var urlTemplate = 'http://xserver-2:40000/services/rest/XMap/tile/{z}/{x}/{y}/gravelpit+PTV_TruckAttributes';
 		return new L.TileLayer(urlTemplate, { 
 			minZoom: 1, 
 			maxZoom: 19, 

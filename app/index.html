@@ -1,51 +1,61 @@
 <!doctype html>
 <html lang="en" ng-app="xClient">
-  <head>
-    <meta charset="utf-8">
-    <title>xClient</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="nav.css" />
-	<link rel="stylesheet" href="app.animations.css" />
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="responsive_nav.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-	
-    <script src="bower_components/angular-route/angular-route.js"></script>
-	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	<script src="bower_components/angular-smart-table/dist/smart-table.min.js"></script>
-	
-    <script src="app.module.js"></script>
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>xClient</title>
+				<link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.min.css" />
+				<link rel="stylesheet" href="app.css" />
+				<link rel="stylesheet" href="nav.css" />
+				<link rel="stylesheet" href="app.animations.css" />
+				<link rel="stylesheet" href="xlocate-list/xlocate-list.template.css" />
+				<script src="bower_components/jquery/dist/jquery.js"></script>
+				<script src="bower_components/jquery/dist/jquery.min.js"></script>
+				<script src="responsive_nav.js"></script>
+				<script src="bower_components/angular/angular.js"></script>
+				<script src="bower_components/angular-route/angular-route.js"></script>
+				<script src="bower_components/angular-resource/angular-resource.js"></script>
+				<script src="bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+				<script src="app.module.js"></script>
+				<script src="app.config.js"></script>
+				<script src="core/core.module.js"></script>
+				<script src="core/checkmark/checkmark.filter.js"></script>
+				<script src="core/xlocate/xlocate.module.js"></script>
+				<script src="core/xlocate/xlocate.service.js"></script>
+				<script src="core/xmap/xmap.module.js"></script>
+				<script src="core/xmap/xmap.service.js"></script>
+				<script src="xlocate-list/xlocate-list.module.js"></script>
+				<script src="xlocate-list/xlocate-list.component.js"></script>
+				
+				<link rel="stylesheet" href="/leaflet/pages/app.css" />
+				<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
 
-    <script src="app.config.js"></script>
-    <script src="core/core.module.js"></script>
-    <script src="core/checkmark/checkmark.filter.js"></script>
-	<script src="core/xlocate/xlocate.module.js"></script>
-	<script src="core/xlocate/xlocate.service.js"></script>
-    <script src="core/xmap/xmap.module.js"></script>
-	<script src="core/xmap/xmap.service.js"></script>
-	<script src="xlocate-list/xlocate-list.module.js"></script>
-    <script src="xlocate-list/xlocate-list.component.js"></script>
-	<link rel="stylesheet" href="/leaflet/pages/app.css" />
-	<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+			</head>
+			<body>
 
-  </head>
-  <body>
-  <div>
-  <ul class="topnav" id="nav" >
-	<li><a href="#!/xlocate">xLocate</a></li>
-  <li class="icon">
-    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-  </li>
-  </ul>
-  </div>
+				<div class="container wrapper">
 
-    <div ng-view></div>
-	<div class="page-wrap">
-   <div class="main-right" width="800" height="800" id="mymap">
-	</div>
-</div>
+					<header class="row header">
+						<ul class="col-md-12 topnav" id="nav" >
+							<li><a href="#!/xMap">xMap</a></li>
+							<li><a href="#!/xlocate">xLocate</a></li>
+							<li><a href="#!/xRoute">xRoute</a></li>
+							<li class="icon"> <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a> </li>
+						</ul>
+					</header>
 
+		
+					<div class="row content"> 
 
-  </body>
-</html>
+						<div class="col-md-6 col-1"> 
+							<div class="main" ng-view> </div>
+					</div>
+						<div class="col-md-6 col-2" id="mymap"></div> 
+					</div>
+					
+					<footer class="row footer">Footer</footer>
+
+				</div> 
+			</body>
+		</html>
+		

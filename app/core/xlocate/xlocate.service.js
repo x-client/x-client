@@ -61,7 +61,7 @@ function SetXlocateRequest($http) {
 			method: 'POST',
 			headers: {'Content-Type': 'application/json'},
 			data: request,
-			url: "http://xserver-2:40000/services/rs/XLocate/searchLocations/"
+			url: "http://xserver-2:50000/services/rs/XLocate/2.1/searchLocations/"
 		});
 	  };
 	 
